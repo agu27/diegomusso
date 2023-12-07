@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diego Musso - Clientes</title>
+
+    <link rel="stylesheet" href="../assets/css/client.css">
+    <link rel="stylesheet" href="../assets/css/client-desktop.css" media="screen and (min-width: 1000px)">
+</head>
+<body>
+    <nav>
+        <img src="../assets/logos/dm-white.png" alt="logo" class="logo">
+
+        <div class="navbar">
+
+            <ul>
+                <li class="about-us">
+                    <a href="/">
+                        <p>Home</p>
+                        <div class="underline"></div>
+                    </a>
+                </li>
+            </ul>
+            {{#if user.admin}}
+                <a href="../../clients" class="log-in">
+                    <p>Clientes</p>
+                </a>
+            {{/if}}
+        </div>
+    </nav>
+
+    <div class="clients-box">
+        <div class="options">
+            <div class="search">
+                <div class="order-by">
+                    Ordenar por:
+                </div>
+                <div class="filters">
+                    <a href="">
+                        Fecha
+                    </a>
+                    <a href="">
+                        Nombre
+                    </a>
+                    <a href="">
+                        Tipo
+                    </a>
+                </div>
+            </div>
+            <form method="POST" action='/add-file/{{id}}' enctype="multipart/form-data" class="data-upload">
+                <div class="add-data">
+                    <label for="fileUpload" class="data-button">Agregar archivo</label>
+                    <input class="data-file" type="file" id="fileUpload" name="fileUpload" accept="image/png,image/jpg,application/pdf,image/jpeg"/>
+                    <div id="fileVisualizer" class="file-name">  </div>
+                </div>
+                <div class="data-submit">
+                    <input type="hidden" name="fileName" id="fileName"/>
+                </div>
+                <div class="data-submit">
+                    <input type="hidden" name="crumb" value={{crumb}} />
+                    <button type="submit" class="data-submit-button">Subir Archivo</button>
+                </div>
+            </form>
+        </div>
+        <div class="data-list">
+            {{#each filesList as |file|}}
+                {{#ifEquals file.owner.email ../userOwner.email}}
+                    <a target="_blank" href="../assets/uploads/{{file.filename}}" class="data" download="{{file.originalFileName}}">
+                        <figure>
+                            {{#ifEquals file.extension 'pdf'}}
+                                <img src="../assets/icons/pdf.png" alt="pdf">
+                            {{/ifEquals}}
+                            {{#ifEquals file.extension 'jpg'}}
+                                <img src="../assets/icons/jpg-icon.png" alt="jpg">
+                            {{/ifEquals}}
+                        </figure>
+                        <div class="name">
+                            {{file.originalFileName}}
+                        </div>
+                        <div class="date">
+                            <div>
+                                Fecha:
+                            </div>
+                            <div>
+                                {{file.date}}
+                            </div>
+                        </div>
+                    </a>
+                {{/ifEquals}}
+            {{/each}}
+        </div>
+    </div>
+    <script type="text/javascript">
+        let fileInput = document.getElementById('fileUpload');
+        let fileNameInput = document.getElementById('fileName');
+
+        fileInput.addEventListener('change', e => {
+            console.log(e);
+            let fileName = fileInput.files[0].name;
+
+
+            fileNameInput.value = fileName;
+
+            console.log(fileNameInput.value);
+
+            if (fileInput.files && fileInput.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    document.getElementById('fileVisualizer').innerHTML = `<p>${fileName}</p>`
+                }
+            reader.readAsDataURL(fileInput.files[0]);
+            }   
+        })
+    </script>
+</body>
+</html>

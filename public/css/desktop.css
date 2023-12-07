@@ -1,0 +1,216 @@
+nav {
+    width: 95vw;
+    height: 100%;
+    display: flex;
+    padding: 8px;
+    align-items: center;
+}
+
+.logo {
+    height: 96px;
+    margin-left: 16px;
+}
+
+.navbar ul li {
+    display: flex;
+    font-size: 2rem;
+    align-items: center;
+}
+
+.navbar ul li a{
+    display: block;
+    font-size: 2.4rem;
+}
+
+.log-in {
+    height: 60px;
+    margin-right: 16px;
+}
+
+.log-in:hover {
+    color: black;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.main-presentation {
+    font-size: 8rem;
+}
+
+.department-all {
+    display: flex;
+}
+
+.departments {
+    align-items: start;
+    width: 50%;
+}
+
+.department-p {
+    height: 10%;
+    display: flex;
+    font-size: 5rem;
+    justify-content: start;
+    align-items: center;
+}
+
+.department-p p {
+    margin-left: 16px;
+}
+
+.department-btn {
+    width: 50%;
+    margin-left: 64px;
+    font-size: 4rem;
+    -webkit-box-shadow: -8px 8px 20px 7px rgba(0,0,0,0.35);
+    -moz-box-shadow: -8px 8px 20px 7px rgba(0,0,0,0.35);
+    box-shadow: -8px 8px 20px 7px rgba(0,0,0,0.35);
+    transition: scale 1s;
+}
+
+.department-btn:hover {
+    scale: 1.05;
+}
+
+.department-btn figure img {
+    height: 48px;
+    width: 48px;
+}
+
+.department-photos {
+    display: block;
+}
+
+.department-photo-1 {
+    position: absolute;
+    top: 175px;
+    right: 15%;
+    z-index: 1;
+    height: 500px;
+    border-radius: 8px;
+    -webkit-box-shadow: -8px 8px 20px 7px rgba(0,0,0,0.35);
+    -moz-box-shadow: -8px 8px 20px 7px rgba(0,0,0,0.35);
+    box-shadow: -8px 8px 20px 7px rgba(0,0,0,0.35);
+    rotate: -2deg;
+}
+
+.department-photo-2,
+.department-photo-3 {
+    position: absolute;
+    top: 125px;
+    right: 5%;
+    height: 500px;
+    border-radius: 8px;
+    -webkit-box-shadow: -8px 8px 20px 7px rgba(0,0,0,0.35);
+    -moz-box-shadow: -8px 8px 20px 7px rgba(0,0,0,0.35);
+    box-shadow: -8px 8px 20px 7px rgba(0,0,0,0.35);
+    transition: 0.75s;
+    rotate: 2deg;
+}
+
+.department-photo-2 {
+    z-index: 0;
+}
+
+.department-photo-3 {
+    z-index: 2;
+    opacity: 0;
+}
+
+
+.department-photo-3:hover {
+    opacity: 1;
+}
+
+.team {
+    flex-direction: row;
+}
+
+.our-team {
+    font-size: 4.5rem;
+}
+
+.team-description {
+    font-size: 2.5rem;
+}
+
+.gallery {
+    width: 60%;
+}
+
+.swiper-slide div {
+    align-items: end;
+}
+
+.swiper-slide div p {
+    width: 25%;
+}
+
+.swiper-slide div p:nth-child(1){
+    font-size: 3.5rem;
+}
+
+.swiper-slide div p:nth-child(2){
+    font-size: 2.5rem;
+}
+
+.sum figure img {
+    height: 160px;
+    margin: auto 32px auto 32px;
+}
+
+.customers {
+    font-size: 4rem;
+    padding: 64px 0px 64px 0;
+}
+
+.customers p {
+    margin: 4px 0 4px 0;
+}
+
+.contact {
+    overflow: hidden;
+}
+
+.h2 {
+    height: 100%;
+    text-align: center;
+    margin-top: 0px;
+    font-size: 12rem;
+    transition: transform 1s;
+}
+
+.contact div {
+    justify-content: space-evenly;
+}
+
+.contact div a {
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 40px 0 40px;
+    transition: scale 0.5s;
+    transition: transform 1s, scale 0.5s;
+}
+
+.contact a figure {
+    height: 90px;
+    transition: -moz-box-shadow 0.5s, -webkit-box-shadow 0.5s, box-shadow 0.5s, -moz-border-radius 0.5s, -webkit-border-radius 0.5s, border-radius 0.5s;
+}
+
+.contact:hover .h2 {
+    transform: translateY(-100%);
+}
+
+.contact:hover a {
+    transform: translateY(-90%);
+}
+
+.contact figure:hover {
+    -moz-box-shadow: 10px 10px 5px #23222779;
+    -webkit-box-shadow: 10px 10px 5px #23222779;
+    box-shadow: 10px 10px 5px #23222779;
+    -moz-border-radius:25px;
+    -webkit-border-radius:25px;
+    border-radius:25px;
+}

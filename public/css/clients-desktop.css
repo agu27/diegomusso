@@ -1,0 +1,56 @@
+nav {
+    width: 95vw;
+    height: 100%;
+    display: flex;
+    padding: 8px;
+    align-items: center;
+}
+
+.logo {
+    height: 96px;
+    margin-left: 16px;
+}
+
+.add-client {
+    margin-right: 16px;
+    width: 140px;
+    height: 40px;
+    font-size: 2rem;
+}
+
+.add-client:hover {
+    color: black;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.navbar ul li {
+    display: block;
+    font-size: 5rem;
+}
+
+.navbar ul li a{
+    display: block;
+    font-size: 2.4rem;
+}
+
+.search figure img {
+    height: 32px;
+}
+
+.search input {
+    font-size: 2.5rem;
+}
+
+.description {
+    font-size: 3rem;
+}
+
+.client {
+    font-size: 2.25rem;
+    transition: 0.25s;
+}
+
+.client:hover {
+    scale: 1.02;
+}

@@ -1,0 +1,196 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "century-gothic", sans-serif;
+    /* background: linear-gradient(rgb(210, 188, 175),white); */
+    background: linear-gradient(rgb(77, 77, 77),rgb(168, 168, 168));
+    background-color: rgb(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav {
+    margin-top: 16px;
+    width: 95vw;
+    height: 64px;
+    display: flex;
+    padding: 8px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(210, 188, 175, 0.75);
+    border-radius: 6px;
+}
+
+.logo {
+    margin-left: 8px;
+    height: 40px;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-right: 0px;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    width: auto;
+    height: 40px;
+    margin-right: 32px;
+}
+
+.register:hover {
+    color: black;
+    border: 2px solid black;
+}
+
+.navbar li {
+    display: flex;
+    margin: 0 5px 0 0;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    margin: 0 0px;
+    font-weight: bold;
+}
+
+.add-client {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 20px;
+    width: 80px;
+    height: 40px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-align: center;
+    color: white;
+    margin: 4px;
+}
+
+.underline {
+    top: 12px;
+    margin: 0 auto;
+    width: 0%;
+    height: 1.5px;
+    background-color: rgba(32, 30, 30, 0.877);
+}
+
+.navbar ul li a:hover {
+    color: rgba(32, 30, 30, 0.877);
+}
+
+.navbar ul li a:hover .underline {
+    width: 100%;
+    transition: 0.3s;
+}
+
+.clients-box {
+    width: 80vw;
+    background-color: rgb(210, 188, 175);
+    border-radius: 20px;
+    margin-top: 24px;
+}
+
+.search {
+    margin: 16px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.search figure {
+    margin: 8px 8px 8px 8px;
+    padding-right: 8px;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid black;
+}
+
+.search figure img {
+    height: 24px;
+}
+
+.search input {
+    font-size: 1.5rem;
+    border: none;
+}
+
+.search input:focus{
+    outline: none;
+}
+
+.clients-list {
+    margin: 16px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.description {
+    width: 90%;
+    display: flex;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.description-name {
+    width: 50%;
+}
+
+.description-cuil {
+    width: 50%;
+}
+
+.client {
+    border-top: 1px solid black;
+    margin: 8px;
+    width: 90%;
+    display: flex;
+    font-size: 1.75rem;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+}
+
+.name {
+    width: 50%;
+}
+
+.cuil {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 50%;
+}
+
+@font-face {
+    font-family: "century-gothic";
+    src: url('../fonts/century-gothic.TTF');
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diego Musso - Registro</title>
+
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/login-desktop.css" media="screen and (min-width: 1000px)">
+</head>
+<body>
+    <nav>
+        <img src="assets/logos/dm-white.png" alt="logo" class="logo">
+
+        <div class="navbar">
+
+            <ul>
+                <li class="about-us">
+                    <a href="/">
+                        <p>Home</p>
+                        <div class="underline"></div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="login-box">
+        <h2>Registrar</h2>
+        {{#with error}}
+            <div class="alert-error" role="alert">
+                {{this}}
+            </div>
+        {{/with}}
+
+        {{#with success}}
+            <div class="alert-success" role="alert">
+                {{this}}
+            </div>
+        {{/with}}
+        <form method="POST" action="/create-user">
+            <div class="user-box">
+                <input type="email" name="email" required="" id="email" style="font-family: inherit;">
+                <label for="email">Mail</label>
+            </div>
+
+            <div class="user-box">
+                <input type="password" name="password" required="" id="password" style="font-family: inherit;">
+                <label>Crear Password</label>
+            </div>
+
+            <div class="user-box">
+                <input type="text" name="name" required="" id="name" pattern=".{3,}" style="font-family: inherit;">
+                <label>Nombre</label>
+            </div>
+
+            <div class="user-box">
+                <input type="text" name="cuil" required="" id="cuil" style="font-family: inherit;">
+                <label>CUIL/CUIT</label>
+            </div>
+
+            <div class="user-box">
+                <input list="isadmin" name="admin" required="" id="admin" style="font-family: inherit;">
+                <label>Admin</label>
+            </div>
+
+            <div class="btn-login">
+                <input type="hidden" name="crumb" value={{crumb}} />
+                <button type="submit" class="sub-btn" style="font-family: inherit;">Registrar</button>
+            </div>
+
+            <datalist id="isadmin">
+                <option value="Si"></option>
+                <option value="No"></option>
+            </datalist>
+        </form>
+    </div>
+</body>
+</html>

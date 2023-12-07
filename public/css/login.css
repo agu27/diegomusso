@@ -1,0 +1,227 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    /* font-family: "orpheuspro",sans-serif; */
+    font-family: "century-gothic", sans-serif;
+    /* background: linear-gradient(rgb(210, 188, 175),white); */
+    background: linear-gradient(rgb(77, 77, 77),rgb(168, 168, 168));
+    background-color: rgb(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav {
+    margin-top: 16px;
+    width: 95vw;
+    height: 64px;
+    display: flex;
+    padding: 8px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(210, 188, 175, 0.75);
+    border-radius: 6px;
+}
+
+.logo {
+    margin-left: 8px;
+    height: 40px;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-right: 0px;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    width: auto;
+    height: 40px;
+    margin-right: 32px;
+}
+
+.register:hover {
+    color: black;
+    border: 2px solid black;
+}
+
+.navbar li {
+    display: flex;
+    margin: 0 5px 0 0;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    margin: 0 0px;
+    font-weight: bold;
+}
+
+.underline {
+    top: 12px;
+    margin: 0 auto;
+    width: 0%;
+    height: 1.5px;
+    background-color: rgba(32, 30, 30, 0.877);
+}
+
+.navbar ul li a:hover {
+    color: rgba(32, 30, 30, 0.877);
+}
+
+.navbar ul li a:hover .underline {
+    width: 100%;
+    transition: 0.3s;
+}
+
+.login-box{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 80vw;
+    padding: 20px;
+    transform: translate(-50%,-50%);
+    background: rgb(210, 188, 175, 0.75);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+.login-box h2{
+    font-size: 2rem;
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+
+.login-box .user-box{
+    position: relative;
+}
+
+.login-box .user-box input{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.login-box .user-box label{
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label{
+    top: -20px;
+    left: 0;
+    color: black;
+    font-size: 12px;
+}
+
+.login-box form a{
+    text-align: center;
+    display: block;
+    border: 1px solid rgb(210, 188, 175);
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin: 40px 40px 0 40px;
+    letter-spacing: 4px;
+}
+
+.login-box a:hover{
+    background: white;
+    color: black;
+    border: 1px solid white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px white,
+                0 0 25px white,
+                0 0 50px white,
+                0 0 100px white;
+}
+
+.btn-login {
+    width: 124px;
+    margin: 0 auto 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.sub-btn {
+    color: white;
+    border: 1px solid rgb(210, 188, 175);
+    border-radius: 5px;
+    padding: 4px;
+    background: none;
+    font-size: 24px;
+    margin: 0 auto 0 auto;
+    transition: 0.5s;
+}
+
+.sub-btn:hover {
+    background: white;
+    color: black;
+    border: 1px solid white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px white,
+                0 0 25px white,
+                0 0 50px white,
+                0 0 100px white;
+}
+
+.alert-success {
+    font-size: 2rem;
+    color: green;
+}
+
+.alert-error {
+    font-size: 2rem;
+    color: red;
+}
+
+@font-face {
+    font-family: "orpheuspro";
+    src: url('../fonts/orpheuspro-medium.otf');
+}
+
+@font-face {
+    font-family: "century-gothic";
+    src: url('../fonts/century-gothic.TTF');
+}

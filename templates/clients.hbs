@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diego Musso - Clientes</title>
+
+    <link rel="stylesheet" href="assets/css/clients.css">
+    <link rel="stylesheet" href="assets/css/clients-desktop.css" media="screen and (min-width: 1000px)">
+</head>
+<body>
+    <nav>
+        <img src="assets/logos/dm-white.png" alt="logo" class="logo">
+
+        <div class="navbar">
+
+            <ul>
+                <li class="about-us">
+                    <a href="/">
+                        <p>Home</p>
+                        <div class="underline"></div>
+                    </a>
+                </li>
+            </ul>
+            {{#if user.admin}}
+                <a href="./register" class="add-client">
+                    <p>Crear usuario</p>
+                </a>
+            {{/if}}
+            {{#if user}}
+                <a href="./logout" class="add-client">
+                    <p>Salir</p>
+                </a>
+            {{else}}
+                <a href="./login" class="add-client">
+                    <p>Log In</p>
+                </a>
+            {{/if}}
+        </div>
+    </nav>
+
+    <div class="clients-box">
+        <div class="search">
+            <figure>
+                <img src="assets/icons/magnifying-glass.png" alt="magnifying glass">
+            </figure>
+            <input type="text" maxlength="20" style="font-family: inherit;">
+        </div>
+        <div class="clients-list">
+            <div class="description">
+                <div class="description-name">
+                    Nombre
+                </div>
+                <div class="description-cuil">
+                    CUIL/CUIT
+                </div>
+            </div>
+
+            {{#each userList as |user|}}
+                {{#unless user.admin}}
+                    <a href="/client/{{user.id}}" class="client">
+                        <div class="name">
+                            {{user.name}}
+                        </div>
+                        <div class="cuil">
+                            {{user.cuil}}
+                        </div>
+                    </a>
+                {{/unless}}
+            {{/each}}
+        </div>
+    </div>
+</body>
+</html>

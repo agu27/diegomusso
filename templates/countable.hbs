@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Diego Musso - Contable</title>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/css/countable.css">
+    <link rel="stylesheet" href="/assets/css/countable-desktop.css" media="screen and (min-width: 1000px)">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+</head>
+<body>
+    <nav>
+        <img src="/assets/logos/dm-white.png" alt="logo" class="logo">
+
+        <div class="navbar">
+
+            <ul>
+                <li>
+                    <a href="./index.html">
+                        <p>Home</p>
+                        <div class="underline"></div>
+                    </a>
+                </li>
+            </ul>
+
+            {{#if user.admin}}
+                <a href="./register" class="log-in">
+                    <p>Crear usuario</p>
+                </a>
+
+                <a href="./clients" class="log-in">
+                    <p>Clientes</p>
+                </a>
+
+                <a href="" class="log-in">
+                    <p>Nueva noticia</p>
+                </a>
+            {{/if}}
+
+            {{#if user}}
+                {{#unless user.admin}}
+                <a href="./client/{{id}}" class="log-in">
+                    <p>Archivos</p>
+                </a>
+                {{/unless}}
+            {{/if}}
+
+            {{#if user}}
+                <a href="./logout" class="log-in">
+                    <p>Salir</p>
+                </a>
+            {{else}}
+                <a href="./login" class="log-in">
+                    <p>Log In</p>
+                </a>
+            {{/if}}
+        </div>
+    </nav>
+    
+    <div class="gallery">
+        <div class="swiper">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <img src="/assets/images/department-img-1.png" alt="">
+                    <div id="newOne">
+                        <p id="newOneTitle">
+                            Noticia 1
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. A deserunt porro voluptatem excepturi asperiores quis cupiditate tempora molestias velit eaque! Aliquam eum quibusdam nobis aut? Iure ipsam et esse dolorum.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. A deserunt porro voluptatem excepturi asperiores quis cupiditate tempora molestias velit eaque! Aliquam eum quibusdam nobis aut? Iure ipsam et esse dolorum.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. A deserunt porro voluptatem excepturi asperiores quis cupiditate tempora molestias velit eaque! Aliquam eum quibusdam nobis aut? Iure ipsam et esse dolorum.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. A deserunt porro voluptatem excepturi asperiores quis cupiditate tempora molestias velit eaque! Aliquam eum quibusdam nobis aut? Iure ipsam et esse dolorum.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. A deserunt porro voluptatem excepturi asperiores quis cupiditate tempora molestias velit eaque! Aliquam eum quibusdam nobis aut? Iure ipsam et esse dolorum.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. A deserunt porro voluptatem excepturi asperiores quis cupiditate tempora molestias velit eaque! Aliquam eum quibusdam nobis aut? Iure ipsam et esse dolorum.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. A deserunt porro voluptatem excepturi asperiores quis cupiditate tempora molestias velit eaque! Aliquam eum quibusdam nobis aut? Iure ipsam et esse dolorum.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. A deserunt porro voluptatem excepturi asperiores quis cupiditate tempora molestias velit eaque! Aliquam eum quibusdam nobis aut? Iure ipsam et esse dolorum.
+
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/department-img-2.png" alt="">
+                    <div id="newTwo">
+                        <p id="newTwoTitle">
+                            Noticia 2
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. A deserunt porro voluptatem excepturi asperiores quis cupiditate tempora molestias velit eaque! Aliquam eum quibusdam nobis aut? Iure ipsam et esse dolorum.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. A deserunt porro voluptatem excepturi asperiores quis cupiditate tempora molestias velit eaque! Aliquam eum quibusdam nobis aut? Iure ipsam et esse dolorum.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="countable-services">
+        <p class="countable-title">
+            ÁREA CONTABLE
+        </p>
+        <p class="countable-body">
+            En nuestro estudio también contamos con profesionales que te ayudarán a tomar las mejores decisiones en lo que respecta a tus finanzas. Nuestras asesorías van dirigidas tanto a empresas como a personas.
+        </p>
+        <p class="countable-subtitle">
+            Servicios que ofrecemos
+        </p>
+        <div class="services">
+            <p id="societies">
+                -Sociedades
+            </p>
+            <span class="services-body" id="societies-body">
+                • Constitución de sociedades <br />
+                • Asesoramiento en materia societaria
+            </span>
+            <p id="taxation">
+                -Impositiva
+            </p>
+            <span class="services-body" id="taxation-body">
+                • Liquidación de impuestos <br />
+                • Asesoramiento en materia impositiva <br />
+                • Planificación impositiva para la toma de decisiones <br />
+                • Exenciones impositivas <br />
+                • Monotributo
+            </span>
+            <p id="work">
+                -Laboral
+            </p>
+            <span class="services-body" id="work-body">
+                • Liquidaciones de impuestos, cargas sociales <br />
+                • Asesoramiento integral en materia laboral <br />
+                • Trámites en el Ministerio de Trabajo
+            </span>
+            <p id="countable">
+                -Contabilidad
+            </p>
+            <span class="services-body" id="countable-body">
+                • Implementación de sistemas informáticos contables <br />
+                • Asesoramiento contable integral <br />
+                •  Auditorías de estados contables <br />
+                • Reportes contables para la toma de decisiones
+            </span>
+            <p id="finantial">
+                -Finanzas
+            </p>
+            <span class="services-body" id="finantial-body">
+                • Estados financieros, flujo de fondos para análisis crediticio por entidades financieras <br />
+                • Asesoramiento financiero
+            </span>
+        </div>
+    </div>
+
+    <div class="contact">
+        <p>
+            Contactate con el área
+        </p>
+        <div class="contact-icons">
+            <a href="https://api.whatsapp.com/send?phone=0543472520261">
+                <figure>
+                    <img src="assets/icons/whatsapp.png" alt="github icon">
+                </figure>
+            </a>
+            <a href="">
+                <figure>
+                    <img src="assets/icons/email.png" alt="mail icon">
+                </figure>
+            </a>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+        speed: 1000,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true
+        },
+        loop: true,
+
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        });
+    </script>
+    <script>
+        let newOne = document.getElementById('newOne');
+        let newOneTitle = document.getElementById('newOneTitle');
+        let newTwo = document.getElementById('newTwo');
+        let newTwoTitle = document.getElementById('newTwoTitle');
+
+        document.addEventListener("DOMContentLoaded", (e) => {
+            if (newOneTitle.innerHTML == false) {
+                newOne.style.display = 'none';
+            }
+            
+            if (newTwoTitle.innerHTML == false) {
+                newTwo.style.display = 'none';
+            }
+        })
+    </script>
+    <script>
+        let soc = document.getElementById('societies');
+        let tax = document.getElementById('taxation');
+        let work = document.getElementById('work');
+        let countable = document.getElementById('countable');
+        let finantial = document.getElementById('finantial');
+        let socBody = document.getElementById('societies-body');
+        let taxBody = document.getElementById('taxation-body');
+        let workBody = document.getElementById('work-body');
+        let countableBody = document.getElementById('countable-body');
+        let finantialBody = document.getElementById('finantial-body');
+        let socDisplay = 0;
+        let taxDisplay = 0;
+        let workDisplay = 0;
+        let countableDisplay = 0;
+        let finantialDisplay = 0;
+
+        soc.addEventListener("click", (e) => {
+            console.log(e)
+            if(socDisplay == 0) {
+                socBody.style.display = 'block';
+                socDisplay = 1;
+            }
+
+            else {
+                socBody.style.display = 'none';
+                socDisplay = 0;
+            }
+        })
+
+        tax.addEventListener("click", (e) => {
+            if(taxDisplay == 0) {
+                taxBody.style.display = 'block';
+                taxDisplay = 1;
+            }
+
+            else {
+                taxBody.style.display = 'none';
+                taxDisplay = 0;
+            }
+        })
+
+        work.addEventListener("click", (e) => {
+            if(workDisplay == 0) {
+                workBody.style.display = 'block';
+                workDisplay = 1;
+            }
+
+            else {
+                workBody.style.display = 'none';
+                workDisplay = 0;
+            }
+        })
+
+        countable.addEventListener("click", (e) => {
+            if(countableDisplay == 0) {
+                countableBody.style.display = 'block';
+                countableDisplay = 1;
+            }
+
+            else {
+                countableBody.style.display = 'none';
+                countableDisplay = 0;
+            }
+        })
+
+        finantial.addEventListener("click", (e) => {
+            if(finantialDisplay == 0) {
+                finantialBody.style.display = 'block';
+                finantialDisplay = 1;
+            }
+
+            else {
+                finantialBody.style.display = 'none';
+                finantialDisplay = 0;
+            }
+        })
+
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+
+</body>
+</html>
