@@ -11,10 +11,11 @@ const path = require('path');
 const routes = require('./routes');
 const vision = require('@hapi/vision');
 const site = require('./controllers/site');
+const functions = require('firebase-functions');
 
 const server = Hapi.server({
     port: process.env.PORT || 3000,
-    host: 'localhost',
+    host: '0.0.0.0',
     routes: {
         files: {
             relativeTo: path.join(__dirname, 'public')
