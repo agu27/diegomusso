@@ -18,6 +18,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 nav {
@@ -58,7 +60,7 @@ nav {
     border-radius: 20px;
     width: 100%;
     height: 40px;
-    margin-right: 32px;
+    margin-right: 16px;
 }
 
 .register:hover {
@@ -113,7 +115,7 @@ nav {
 
 .gallery {
     margin-top: 32px;
-    height: 400px;
+    height: 350px;
     width: 100%;
     display: flex;
 }
@@ -177,7 +179,7 @@ nav {
 
 .swiper-slide div p:nth-child(1){
     text-align: start;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .swiper-slide div p:nth-child(2){
@@ -192,6 +194,10 @@ nav {
 
 .swiper .swiper-pagination-bullet-active {
     background: black;
+}
+
+.insurance {
+    margin-top: 16px;
 }
 
 .countable-services {
@@ -249,6 +255,47 @@ nav {
     font-size: 2rem;
 }
 
+.companies {
+    width: 95vw;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    padding: 8px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.companies h1 {
+    font-size: 3rem;
+}
+
+.all-companies {
+    display: flex;
+    width: 100%;
+    margin-top: 8px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.companies figure {
+    margin: 4px 0 4px 0;
+}
+
+.companies figure:hover .company-logo {
+    scale: 1.1;
+    transition: 1s;
+}
+
+.companies figure img {
+    height: 100px;
+    width: 160px;
+    object-fit: contain;
+    overflow: hidden;
+}
+
+.companies h1 {
+    text-align: center;
+}
+
 .contact {
     width: 100%;
     background-color: white;
@@ -272,6 +319,149 @@ nav {
     height: 50px;
     margin: 0 16px 0 16px;
 }
+
+.close-window {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.data-upload {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.box {
+    display: flex;
+    font-size: 1.5rem;
+    flex-direction: column;
+    width: 100%;
+    margin: 8px auto 0 auto;
+}
+
+.title-input {
+    width: 100%;
+    margin-top: 8px;
+    height: 30px;
+    border-radius: 8px;
+    border: 1px solid black;
+    padding: 0 8px 0 8px;
+}
+
+.body-input {
+    width: 100%;
+    margin-top: 8px;
+    height: 120px;
+    border-radius: 8px;
+    border: 1px solid black;
+    padding: 8px 8px;
+    text-align: justify;
+}
+
+.data-submit {
+    width: 124px;
+    margin: 18px auto 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.data-submit-button {
+    cursor: pointer;
+    color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 4px;
+    background: none;
+    font-size: 24px;
+    margin: 0 auto 0 auto;
+    transition: 0.5s;
+}
+
+.data-submit-button:hover {
+    color: black;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.title-input:focus, .body-input:focus {
+    outline: none;
+}
+
+.add-data {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 1.5rem; 
+}
+
+.data-file {
+    display: none;
+}
+
+.grid {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.form-element {
+    width: 200px;
+    height: 200px;
+    box-shadow: 0px 0px 20px 5px rgb(100,100,100,0.1);
+}
+
+.form-element input {
+    display: none;
+}
+
+.form-element img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.form-element div {
+    position: relative;
+    height: 40px;
+    margin-top: -40px;
+    background:  rgb(0,0,0,0.5);
+    text-align: center;
+    line-height: 40px;
+    font-size: 1rem;
+    color: #f5f5f5;
+    font-weight: 600;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.form-element div span{
+    font-size: 3rem;
+}
+
+.send-mail {
+    width: 90vw;
+    height: 75vh;
+    background-color: rgb(210, 188, 175, 1);
+    border: 1px solid black;
+    border-radius: 16px;
+    display: none;
+    position: absolute;
+    top: 80%;
+    right: 5%;
+}
+
+.email-input {
+    width: 100%;
+    margin-top: 8px;
+    height: 250px;
+    border-radius: 8px;
+    border: 1px solid black;
+    padding: 8px 8px;
+    text-align: justify;
+}
+
 
 @font-face {
     font-family: "orpheuspro";

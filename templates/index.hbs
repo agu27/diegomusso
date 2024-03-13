@@ -53,6 +53,9 @@
             </div>
         </nav>
         <main>
+            {{!-- <figure class="dm-main">
+                <img src="assets/logos/dm-main.png" alt="">
+            </figure> --}}
             <div class="main-presentation">
                 <p class="p1">
                     DIEGO MUSSO
@@ -88,7 +91,7 @@
                             Capacitaciones
                         </p>
                     </a>
-                    <a href="" class="department-btn">
+                    <a href="./insurance" class="department-btn">
                         <figure>
                             <img src="/assets/icons/insurance.png" alt="insurance icon">
                         </figure>
@@ -124,18 +127,19 @@
                         <div class="swiper-wrapper">
 
                             <div class="swiper-slide">
-                                <img src="/assets/images/female-1.jpg" alt="">
-                                <div class="antonela">
+                                <img src="/assets/images/dm-team-cut.png" alt="">
+                                {{!-- <div class="antonela">
                                     <p>
                                         Antonela
                                     </p>
                                     <p>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. A deserunt porro voluptatem excepturi asperiores quis cupiditate tempora molestias velit eaque! Aliquam eum quibusdam nobis aut? Iure ipsam et esse dolorum.
                                     </p>
-                                </div>
+                                </div> --}}
                             </div>
+
                             <div class="swiper-slide">
-                                <img src="/assets/images/male-2.jpg" alt="">
+                                <img src="/assets/images/diego.jpg" alt="">
                                 <div class="diego">
                                     <p>
                                         Diego
@@ -145,8 +149,21 @@
                                     </p>
                                 </div>
                             </div>
+
                             <div class="swiper-slide">
-                                <img src="/assets/images/male-2.jpg" alt="">
+                                <img src="/assets/images/antonela.jpg" alt="">
+                                <div class="antonela">
+                                    <p>
+                                        Antonela
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. A deserunt porro voluptatem excepturi asperiores quis cupiditate tempora molestias velit eaque! Aliquam eum quibusdam nobis aut? Iure ipsam et esse dolorum.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="/assets/images/santiago.jpg" alt="">
                                 <div class="santi">
                                     <p>
                                         Santiago
@@ -156,11 +173,48 @@
                                     </p>
                                 </div>
                             </div>
+
                             <div class="swiper-slide">
-                                <img src="/assets/images/female-1.jpg" alt="">
+                                <img src="/assets/images/laila.jpg" alt="">
                                 <div class="laila">
                                     <p>
                                         Laila
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. A deserunt porro voluptatem excepturi asperiores quis cupiditate tempora molestias velit eaque! Aliquam eum quibusdam nobis aut? Iure ipsam et esse dolorum.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="/assets/images/agustina.jpg" alt="">
+                                <div class="laila">
+                                    <p>
+                                        Agustina
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. A deserunt porro voluptatem excepturi asperiores quis cupiditate tempora molestias velit eaque! Aliquam eum quibusdam nobis aut? Iure ipsam et esse dolorum.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="/assets/images/ulises.jpg" alt="">
+                                <div class="laila">
+                                    <p>
+                                        Ulises
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. A deserunt porro voluptatem excepturi asperiores quis cupiditate tempora molestias velit eaque! Aliquam eum quibusdam nobis aut? Iure ipsam et esse dolorum.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="/assets/images/rodrigo.jpg" alt="">
+                                <div class="laila">
+                                    <p>
+                                        Rodrigo
                                     </p>
                                     <p>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. A deserunt porro voluptatem excepturi asperiores quis cupiditate tempora molestias velit eaque! Aliquam eum quibusdam nobis aut? Iure ipsam et esse dolorum.
@@ -196,7 +250,25 @@
                 </div>
             </div>
 
-            
+            <div class="sustentable">
+                <div class="sustentable-text">
+                    <div class="sustentable-text-title">
+                        <h1>Somos sustentables!</h1>
+                        <img src="/assets/icons/solar-panel.png" alt="">
+                    </div>
+                    <div class="sustentable-text-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur necessitatibus non, commodi id ducimus eaque quaerat, expedita totam debitis quod qui suscipit laborum repudiandae, soluta autem fugit! Beatae, quis quaerat.
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa illo veritatis ex consequatur corporis veniam quos? Voluptatibus, distinctio deleniti corporis rerum nostrum soluta quasi. Voluptatibus, nemo. Eligendi, temporibus recusandae? At!
+                    </div>
+                </div>
+
+                <div class="solar-panel-img">
+                    <figure>
+                        <img src="/assets/images/solarpanel.png" alt="">
+                    </figure>
+                </div>
+            </div>
+                       
             <div class="contact" id="contact">
                 <h2 class="h2">Contactanos</h2>
                 <div>
@@ -215,17 +287,51 @@
                             <img src="/assets/icons/whatsapp.png" alt="github icon">
                         </figure>
                     </a>
-                    <a href="">
+                    <a id="emailButton">
                         <figure>
                             <img src="/assets/icons/email.png" alt="mail icon">
                         </figure>
                     </a>
                 </div>
             </div>
+
+            <div class="send-mail" id="sendMail">
+                <form method="POST" action="https://formsubmit.co/administracion@diegomusso.com.ar" class="data-upload">
+                    <figure class="close-window" id="closeEmailWindow">
+                        <img src="../assets/icons/cancel.png" alt="" class="close-window">
+                    </figure>
+                    <div class="box">
+                        <label>Nombre</label>
+                        <input type="text" name="name" required="" id="emailName" style="font-family: inherit;" class="title-input">
+                    </div>
+
+                    <div class="box">
+                        <label>Email</label>
+                        <input type="email" name="email" required="" id="emailOwner" style="font-family: inherit;" class="title-input">
+                    </div>
+
+                    <div class="box">
+                        <label>Mensaje</label>
+                        {{!-- <input type="text" name="body" required="" id="newBody" style="font-family: inherit;" class="title-input"> --}}
+                        <textarea type="text" rows="1" cols="26" name="emailBody" class="email-input" style="font-family: inherit;"></textarea>
+                    </div>
+                    
+                    <div class="data-submit">
+                        <input type="hidden" name="crumb" value={{crumb}} />
+                        <button type="submit" class="data-submit-button" style="font-family: inherit;">Enviar</button>
+                    </div>
+                </form>
+            </div>
         </main>
         <footer class="footer">
             <p>
-                ©Copyright. All rights reserved.
+                ©Copyright. All rights reserved.                 
+            </p>
+            <p>
+                Mail: administracion@diegomusso.com.ar
+            </p>
+            <p>
+                Tel: 3472520261
             </p>
         </footer>
     </div>
@@ -257,6 +363,25 @@
             prevEl: '.swiper-button-prev',
         },
         });
+    </script>
+
+    <script>
+        let sendEmail = document.getElementById('sendMail');
+        let closeEmail = document.getElementById('closeEmailWindow');
+        let emailBttn = document.getElementById('emailButton');
+
+        closeEmail.addEventListener('click', e => {
+
+                return sendEmail.style.display = 'none'
+
+        });
+
+        emailBttn.addEventListener('click', e => {
+
+                return sendEmail.style.display = 'flex'
+
+        });
+
     </script>
 </body>
 </html>

@@ -8,7 +8,6 @@ const { v1: uuid } = require('uuid');
 const isBuffer = require('is-buffer')
 const write = promisify(writeFile);
 const users = require ('../models/index').users;
-const fileInput = require('../templates/client.hbs').fileInput;
 
 async function addFile (req, h) {
 

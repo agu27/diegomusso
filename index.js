@@ -46,7 +46,8 @@ async function init () {
         await server.register([scooter, {
             plugin: blankie,
             options: {
-                defaultSrc: `'self' 'unsafe-inline'`,
+                defaultSrc: `'self' 'unsafe-inline' `,
+                imgSrc:`'self' data: blob: 'unsafe-inline' https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg`,
                 styleSrc: `'self' 'unsafe-inline' https://maxcdn.bootstrapcdn.com https://unpkg.com/aos@2.3.1/dist/aos.css https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css`,
                 fontSrc: `'self' 'unsafe-inline' data:`,
                 scriptSrc: `'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://maxcdn.bootstrapcdn.com https://code.jquery.com  https://unpkg.com/aos@2.3.1/dist/aos.js https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js`,

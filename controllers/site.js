@@ -2,6 +2,8 @@
 
 const files = require('../models/index').files;
 
+const articles = require('../models/index').articles;
+
 const users = require ('../models/index').users;
 
 
@@ -23,6 +25,27 @@ function register (req, h) {
 }
 
 async function countable (req, h) {
+
+    let articleList;
+    let reverseArticleList = [];
+
+    try {
+        articleList = await articles.getFiles();
+
+        if (!articleList) {
+            return notFound(req, h);
+        }
+
+        for (let i = articleList.length - 1; i >= 0; i--) {
+            reverseArticleList.push(articleList[i]);
+        }
+
+        console.log(reverseArticleList);
+
+    } catch (error) {
+        console.error(error);
+    }
+
     if (req.state.user) {
         let data;
         try {
@@ -33,6 +56,7 @@ async function countable (req, h) {
                 return h.view('countable', {
                     user: req.state.user,
                     id: data,
+                    reverseArticleList: reverseArticleList,
                 });
         } catch (error) {
             console.error(error);
@@ -41,7 +65,46 @@ async function countable (req, h) {
 
     else {
         return h.view('countable', {
-            title: 'Contable'
+            title: 'Contable',
+            reverseArticleList: reverseArticleList,
+        });
+    }
+}
+
+async function countableNews (req, h) {
+
+    let articleList;
+    let reverseArticleList = [];
+
+    try {
+        articleList = await articles.getFiles();
+
+        if (!articleList) {
+            return notFound(req, h);
+        }
+
+        for (let i = articleList.length - 1; i >= 0; i--) {
+            reverseArticleList.push(articleList[i]);
+        }
+
+        console.log(reverseArticleList);
+
+    } catch (error) {
+        console.error(error);
+    }
+
+    if (req.state.user) {
+        return h.view('countable-news', {
+            user: req.state.user,
+            title: 'Noticias',
+            reverseArticleList: reverseArticleList,
+        });
+    }
+
+    else {
+        return h.view('countable-news', {
+            title: 'Noticias',
+            reverseArticleList: reverseArticleList,
         });
     }
 }
@@ -79,6 +142,21 @@ function login (req, h) {
         title: 'LogIn',
         user: req.state.user,
     });
+}
+
+function insurance (req, h) {
+    if (req.state.user) {
+        return h.view('insurance', {
+            title: 'Insurance',
+            user: req.state.user,
+        });
+    }
+
+    else {
+        return h.view('insurance', {
+            title: 'Insurance',
+        });
+    }
 }
 
 async function viewUser (req, h) {
@@ -130,5 +208,7 @@ module.exports = {
     notFound,
     fileNotFound,
     clients,
-    viewUser
+    viewUser,
+    countableNews,
+    insurance
 }

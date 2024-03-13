@@ -54,7 +54,9 @@ function failValidation (req, h, err) {
     const templates = {
         '/create-user': 'register',
         '/validate-user': 'login',
-        '/create-question': 'ask'
+        '/create-question': 'ask',
+        '/add-file/{id}': 'index',
+        '/add-new': 'index',
     }
 
     return h.view(templates[req.path], {

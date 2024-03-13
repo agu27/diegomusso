@@ -33,6 +33,10 @@ nav {
     border-radius: 20px;
 }
 
+.dm-main img {
+    width: 45vw;
+}
+
 .main-presentation {
     font-size: 8rem;
 }
@@ -141,8 +145,17 @@ nav {
     width: 60%;
 }
 
+.swiper-slide img {
+    max-height: 1000px;
+    /* width: 100%; */
+}
+
 .swiper-slide div {
+    padding-left: 0px;
+    padding-right: 140px;
     align-items: end;
+    left: 0%;
+    width: 100%;
 }
 
 .swiper-slide div p {
@@ -216,4 +229,66 @@ nav {
     -moz-border-radius:25px;
     -webkit-border-radius:25px;
     border-radius:25px;
+}
+
+.box {
+    font-size: 3rem;
+}
+
+.title-input {
+    height: 40px;
+    font-size: 2rem;
+}
+
+.body-input {
+    height: 240px;
+    font-size: 2rem;
+}
+
+.form-element {
+    width: 300px;
+    height: 300px;
+}
+
+.send-mail {
+    width: 60vw;
+    right: 20%;
+    top: 305%;
+}
+
+.email-input {
+    height: 375px;
+}
+
+.sustentable {
+    flex-direction: row;
+}
+
+.sustentable-text {
+    margin: 32px;
+}
+
+.sustentable-text-title h1 {
+    font-size: 4rem;
+    margin-right: 16px;
+}
+
+.sustentable-text-title img {
+    height: 60px;
+}
+
+.sustentable-text-body {
+    font-size: 3rem;
+}
+
+.solar-panel-img figure {
+    margin: 32px 32px 32px 0;
+}
+
+.solar-panel-img figure img {
+    height: 600px;
+}
+
+.footer p {
+    font-size: 1.5rem;
 }

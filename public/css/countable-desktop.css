@@ -40,10 +40,11 @@ nav {
 
 .swiper-slide div {
     top: 0;
-    left: 75%;
+    left: 65%;
     z-index: 99;
-    width: 25%;
+    width: 35%;
     height: 100%;
+    max-height: none;
 }
 
 .swiper-slide div p:nth-child(1){
@@ -78,6 +79,27 @@ nav {
     font-size: 3.5rem;
 }
 
+.companies {
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.companies h1 {
+    margin-top: 16px;
+    font-size: 6rem;
+}
+
+.all-companies {
+    margin-top: 48px;
+}
+
+.companies figure img {
+    height: 300px;
+    width: 480px;
+    object-fit: contain;
+    overflow: hidden;
+}
+
 .contact {
     width: 100%;
     background-color: white;
@@ -108,4 +130,34 @@ nav {
 
 .contact a:hover {
     scale: 1.1;
+}
+
+.box {
+    font-size: 3rem;
+}
+
+.title-input {
+    height: 40px;
+    font-size: 2rem;
+}
+
+.body-input {
+    height: 240px;
+    font-size: 2rem;
+}
+
+.form-element {
+    width: 300px;
+    height: 300px;
+}
+
+.send-mail {
+    z-index: 999;
+    width: 60vw;
+    right: 20%;
+    top: 95%;
+}
+
+.email-input {
+    height: 375px;
 }

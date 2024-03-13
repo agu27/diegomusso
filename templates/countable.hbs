@@ -28,6 +28,15 @@
                 </li>
             </ul>
 
+            <ul>
+                <li>
+                    <a href="./countable/news">
+                        <p>Noticias</p>
+                        <div class="underline"></div>
+                    </a>
+                </li>
+            </ul>
+
             {{#if user.admin}}
                 <a href="./register" class="log-in">
                     <p>Crear usuario</p>
@@ -35,10 +44,6 @@
 
                 <a href="./clients" class="log-in">
                     <p>Clientes</p>
-                </a>
-
-                <a href="" class="log-in">
-                    <p>Nueva noticia</p>
                 </a>
             {{/if}}
 
@@ -67,7 +72,23 @@
 
             <div class="swiper-wrapper">
 
-                <div class="swiper-slide">
+                {{#each reverseArticleList as |article|}}
+                    {{#if article.display}}
+                        <div class="swiper-slide">
+                            <img src={{article.path}} alt="">
+                            <div id={{article.pos}}>
+                                <p id="{{article.pos}}Title" class="newTitle">
+                                    {{article.title}}
+                                </p>
+                                <p>
+                                    {{article.body}}
+                                </p>
+                            </div>
+                        </div>
+                    {{/if}}
+                {{/each}}
+
+                {{!-- <div class="swiper-slide">
                     <img src="/assets/images/department-img-1.png" alt="">
                     <div id="newOne">
                         <p id="newOneTitle">
@@ -97,7 +118,7 @@
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. A deserunt porro voluptatem excepturi asperiores quis cupiditate tempora molestias velit eaque! Aliquam eum quibusdam nobis aut? Iure ipsam et esse dolorum.
                         </p>
                     </div>
-                </div>
+                </div> --}}
             </div>
             <div class="swiper-pagination"></div>
             
@@ -168,17 +189,45 @@
             Contactate con el área
         </p>
         <div class="contact-icons">
-            <a href="https://api.whatsapp.com/send?phone=0543472520261">
+            <a href="https://api.whatsapp.com/send?phone=0543472506163">
                 <figure>
                     <img src="assets/icons/whatsapp.png" alt="github icon">
                 </figure>
             </a>
-            <a href="">
+            <a id="emailButton">
                 <figure>
                     <img src="assets/icons/email.png" alt="mail icon">
                 </figure>
             </a>
         </div>
+    </div>
+
+    <div class="send-mail" id="sendMail">
+        <form method="POST" action="https://formsubmit.co/estudio@diegomusso.com.ar" class="data-upload">
+            <figure class="close-window" id="closeEmailWindow">
+                <img src="../assets/icons/cancel.png" alt="" class="close-window">
+            </figure>
+            <div class="box">
+                <label>Nombre</label>
+                <input type="text" name="name" required="" id="emailName" style="font-family: inherit;" class="title-input">
+            </div>
+
+            <div class="box">
+                <label>Email</label>
+                <input type="email" name="email" required="" id="emailOwner" style="font-family: inherit;" class="title-input">
+            </div>
+
+            <div class="box">
+                <label>Mensaje</label>
+                {{!-- <input type="text" name="body" required="" id="newBody" style="font-family: inherit;" class="title-input"> --}}
+                <textarea type="text" rows="1" cols="26" name="emailBody" class="email-input" style="font-family: inherit;"></textarea>
+            </div>
+            
+            <div class="data-submit">
+                <input type="hidden" name="crumb" value={{crumb}} />
+                <button type="submit" class="data-submit-button" style="font-family: inherit;">Enviar</button>
+            </div>
+        </form>
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -211,10 +260,16 @@
         });
     </script>
     <script>
-        let newOne = document.getElementById('newOne');
-        let newOneTitle = document.getElementById('newOneTitle');
-        let newTwo = document.getElementById('newTwo');
-        let newTwoTitle = document.getElementById('newTwoTitle');
+        let newOne = document.getElementById('new1');
+        let newOneTitle = document.getElementById('new1Title');
+        let newTwo = document.getElementById('new2');
+        let newTwoTitle = document.getElementById('new2Title');
+        let newThree = document.getElementById('new3');
+        let newThreeTitle = document.getElementById('new3Title');
+        let newFour = document.getElementById('new4');
+        let newFourTitle = document.getElementById('new4Title');
+        let newFive = document.getElementById('new5');
+        let newFiveTitle = document.getElementById('new5Title');
 
         document.addEventListener("DOMContentLoaded", (e) => {
             if (newOneTitle.innerHTML == false) {
@@ -223,6 +278,18 @@
             
             if (newTwoTitle.innerHTML == false) {
                 newTwo.style.display = 'none';
+            }
+
+            if (newThreeTitle.innerHTML == false) {
+                newThree.style.display = 'none';
+            }
+
+            if (newFourTitle.innerHTML == false) {
+                newFour.style.display = 'none';
+            }
+
+            if (newFiveTitle.innerHTML == false) {
+                newFive.style.display = 'none';
             }
         })
     </script>
@@ -303,6 +370,25 @@
                 finantialDisplay = 0;
             }
         })
+
+    </script>
+
+    <script>
+        let sendEmail = document.getElementById('sendMail');
+        let closeEmail = document.getElementById('closeEmailWindow');
+        let emailBttn = document.getElementById('emailButton');
+
+        closeEmail.addEventListener('click', e => {
+
+                return sendEmail.style.display = 'none'
+
+        });
+
+        emailBttn.addEventListener('click', e => {
+
+                return sendEmail.style.display = 'flex'
+
+        });
 
     </script>
 

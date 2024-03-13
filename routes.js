@@ -4,6 +4,7 @@ const Joi = require('@hapi/joi');
 const site = require ('./controllers/site');
 const user = require ('./controllers/user');
 const file = require('./controllers/file');
+const article = require ('./controllers/countablenew');
 
 module.exports = 
 [
@@ -27,6 +28,11 @@ module.exports =
     method: 'GET',
     path: '/countable',
     handler: site.countable
+}),
+({
+    method: 'GET',
+    path: '/insurance',
+    handler: site.insurance
 }),
 ({
     method: 'GET',
@@ -57,6 +63,16 @@ module.exports =
 }),
 ({
     method: 'GET',
+    path: '/countable/news',
+    handler: site.countableNews
+}),
+({
+    method: 'GET',
+    path: '/news/delete/{id}',
+    handler: article.deleteCountableNew
+}),
+({
+    method: 'GET',
     path: '/client/{id}',
     handler: site.viewUser
 }),
@@ -82,6 +98,25 @@ module.exports =
         }
     },
     handler: file.addFile,
+}),
+({
+    path: '/add-new',
+    method: 'POST',
+    options: {
+        payload: {
+            parse: true,
+            multipart: true,
+        },
+        validate: {
+          payload: Joi.object({
+            title: Joi.any().required(),
+            newBody: Joi.any().required(),
+            fileUpload: Joi.any().required(),
+          }), 
+          failAction: user.failValidation
+        }
+    },
+    handler: article.addNew,
 }),
 ({
     path: '/validate-user',

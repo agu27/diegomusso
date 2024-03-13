@@ -115,6 +115,18 @@ nav {
     transition: 0.3s;
 }
 
+.dm-main {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-bottom: ; */
+}
+
+.dm-main img {
+    width: 90vw;
+}
+
 .main-presentation {
     width: 100vw;
     height: calc(100vh - 64px);
@@ -248,19 +260,20 @@ nav {
 }
 
 .swiper-slide img {
-    width: 100%;
+    max-height: 254px;
+    /* width: 100%; */
 }
 
 .swiper-slide div {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 50%;
     opacity: 1;
     z-index: 99;
-    width: 100%;
+    width: 50%;
     height: 100%;
     background-color: rgb(210, 188, 175, 0.3);
-    padding-left: 44px;
+    padding-left: 20px;
     padding-right: 44px;
     text-align: justify;
     display: flex;
@@ -275,11 +288,11 @@ nav {
 
 .swiper-slide div p:nth-child(1){
     text-align: start;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .swiper-slide div p:nth-child(2){
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 .swiper .swiper-button-next, .swiper .swiper-button-prev {
@@ -315,6 +328,49 @@ nav {
 
 .customers p {
     margin: 4px 0 4px 0;
+}
+
+.sustentable {
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sustentable-text-title {
+    display: flex;
+    padding: 8px;
+    width: 100%;
+    margin: 16px auto 0 auto;
+    justify-content: center;
+}
+
+.sustentable-text-title h1 {
+    font-size: 3rem;
+    margin: auto 8px auto 0;
+    
+}
+
+.sustentable-text-title img {
+    height: 30px;
+}
+
+.sustentable-text-body {
+    padding: 16px ;
+    font-size: 2rem;
+    text-align: justify;
+}
+
+.solar-panel-img figure {
+    margin: 16px 0 32px 0;
+}
+
+.solar-panel-img figure img {
+    height: 200px;
+    object-fit: contain;
+    overflow: hidden;
+    border-radius: 24px;
 }
 
 .contact {
@@ -362,7 +418,7 @@ nav {
     display: flex;
     align-items: center;
     overflow: none;
-    justify-content: end;
+    justify-content: space-evenly;
 }
 
 .footer figure {
@@ -372,8 +428,150 @@ nav {
 
 .footer p {
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin-right: 16px;
+}
+
+.close-window {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.data-upload {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.box {
+    display: flex;
+    font-size: 1.5rem;
+    flex-direction: column;
+    width: 100%;
+    margin: 8px auto 0 auto;
+}
+
+.title-input {
+    width: 100%;
+    margin-top: 8px;
+    height: 30px;
+    border-radius: 8px;
+    border: 1px solid black;
+    padding: 0 8px 0 8px;
+}
+
+.body-input {
+    width: 100%;
+    margin-top: 8px;
+    height: 120px;
+    border-radius: 8px;
+    border: 1px solid black;
+    padding: 8px 8px;
+    text-align: justify;
+}
+
+.data-submit {
+    width: 124px;
+    margin: 18px auto 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.data-submit-button {
+    cursor: pointer;
+    color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 4px;
+    background: none;
+    font-size: 24px;
+    margin: 0 auto 0 auto;
+    transition: 0.5s;
+}
+
+.data-submit-button:hover {
+    color: black;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.title-input:focus, .body-input:focus {
+    outline: none;
+}
+
+.add-data {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 1.5rem; 
+}
+
+.data-file {
+    display: none;
+}
+
+.grid {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.form-element {
+    width: 200px;
+    height: 200px;
+    box-shadow: 0px 0px 20px 5px rgb(100,100,100,0.1);
+}
+
+.form-element input {
+    display: none;
+}
+
+.form-element img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.form-element div {
+    position: relative;
+    height: 40px;
+    margin-top: -40px;
+    background:  rgb(0,0,0,0.5);
+    text-align: center;
+    line-height: 40px;
+    font-size: 1rem;
+    color: #f5f5f5;
+    font-weight: 600;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.form-element div span{
+    font-size: 3rem;
+}
+
+.send-mail {
+    width: 90vw;
+    height: 75vh;
+    background-color: rgb(210, 188, 175, 1);
+    border: 1px solid black;
+    border-radius: 16px;
+    display: none;
+    position: absolute;
+    top: 315%;
+    right: 5%;
+}
+
+.email-input {
+    width: 100%;
+    margin-top: 8px;
+    height: 250px;
+    border-radius: 8px;
+    border: 1px solid black;
+    padding: 8px 8px;
+    text-align: justify;
 }
 
 @keyframes underlined {
