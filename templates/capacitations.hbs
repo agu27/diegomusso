@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Diego Musso - Seguros</title>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/css/countable.css">
+    <link rel="stylesheet" href="/assets/css/countable-desktop.css" media="screen and (min-width: 1000px)">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+</head>
+<body>
+    <nav>
+        <img src="/assets/logos/dm-white.png" alt="logo" class="logo">
+
+        <div class="navbar">
+
+            <ul>
+                <li>
+                    <a href="./index.html">
+                        <p>Home</p>
+                        <div class="underline"></div>
+                    </a>
+                </li>
+            </ul>
+
+            {{#if user}}
+                <a href="./logout" class="log-in">
+                    <p>Salir</p>
+                </a>
+            {{else}}
+                <a href="./login" class="log-in">
+                    <p>Log In</p>
+                </a>
+            {{/if}}
+        </div>
+    </nav>
+    
+
+    <div class="countable-services insurance">
+        <p class="countable-title">
+            ÁREA CAPACITACIONES
+        </p>
+        <p class="countable-body">
+            En el segundo piso de nuestro Estudio contamos con un área dedicada a cursos, charlas y talleres. Un espacio de formación para aquellas personas de la ciudad y de la zona que estén interesadas en sumar nuevas herramientas y conocimientos. 
+        </p>
+        <p class="countable-subtitle">
+            Algunas de las propuestas
+        </p>
+        <div class="services">
+            <p id="societies">
+                -Computación 
+            </p>
+            {{!-- <span class="services-body" id="societies-body">
+                • Constitución de sociedades <br />
+                • Asesoramiento en materia societaria
+            </span> --}}
+            <p id="taxation">
+                -Excel básico e intermedio
+            </p>
+            {{!-- <span class="services-body" id="taxation-body">
+                • Liquidación de impuestos <br />
+                • Asesoramiento en materia impositiva <br />
+                • Planificación impositiva para la toma de decisiones <br />
+                • Exenciones impositivas <br />
+                • Monotributo
+            </span> --}}
+            <p id="work">
+                -Comunicación efectiva y trabajo en equipo
+            </p>
+            {{!-- <span class="services-body" id="work-body">
+                • Liquidaciones de impuestos, cargas sociales <br />
+                • Asesoramiento integral en materia laboral <br />
+                • Trámites en el Ministerio de Trabajo
+            </span> --}}
+            <p id="countable">
+                -Herramientas digitales - Canva y Reels
+            </p>
+            {{!-- <span class="services-body" id="countable-body">
+                • Implementación de sistemas informáticos contables <br />
+                • Asesoramiento contable integral <br />
+                •  Auditorías de estados contables <br />
+                • Reportes contables para la toma de decisiones
+            </span> --}}   
+        </div>
+    </div>
+
+    <div class="contact">
+        <p>
+            Contactate con el área
+        </p>
+        <div class="contact-icons">
+            <a href="https://api.whatsapp.com/send?phone=0543472645668">
+                <figure>
+                    <img src="assets/icons/whatsapp.png" alt="github icon">
+                </figure>
+            </a>
+            <a id="emailButton">
+                <figure>
+                    <img src="assets/icons/email.png" alt="mail icon">
+                </figure>
+            </a>
+        </div>
+    </div>
+
+    
+    <div class="send-mail capacitations-mail" id="sendMail">
+        <form method="POST" action="https://formsubmit.co/administracion@diegomusso.com.ar" class="data-upload">
+            <figure class="close-window" id="closeEmailWindow">
+                <img src="../assets/icons/cancel.png" alt="" class="close-window">
+            </figure>
+            <div class="box">
+                <label>Nombre</label>
+                <input type="text" name="name" required="" id="emailName" style="font-family: inherit;" class="title-input">
+            </div>
+
+            <div class="box">
+                <label>Email</label>
+                <input type="email" name="email" required="" id="emailOwner" style="font-family: inherit;" class="title-input">
+            </div>
+
+            <div class="box">
+                <label>Mensaje</label>
+                {{!-- <input type="text" name="body" required="" id="newBody" style="font-family: inherit;" class="title-input"> --}}
+                <textarea type="text" rows="1" cols="26" name="emailBody" class="email-input" style="font-family: inherit;"></textarea>
+            </div>
+            
+            <div class="data-submit">
+                <input type="hidden" name="crumb" value={{crumb}} />
+                <button type="submit" class="data-submit-button" style="font-family: inherit;">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        let sendEmail = document.getElementById('sendMail');
+        let closeEmail = document.getElementById('closeEmailWindow');
+        let emailBttn = document.getElementById('emailButton');
+
+        closeEmail.addEventListener('click', e => {
+
+                return sendEmail.style.display = 'none'
+
+        });
+
+        emailBttn.addEventListener('click', e => {
+
+                return sendEmail.style.display = 'flex'
+
+        });
+
+    </script>
+
+</body>
+</html>

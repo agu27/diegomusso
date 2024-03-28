@@ -66,7 +66,7 @@ class CountableNews {
 
     async getFiles () {
         const articleList = [];
-
+        
         const result = await this.collection.get();
         const finalResult = await result.val();
         

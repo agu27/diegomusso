@@ -28,7 +28,7 @@ async function countable (req, h) {
 
     let articleList;
     let reverseArticleList = [];
-
+    
     try {
         articleList = await articles.getFiles();
 
@@ -87,8 +87,6 @@ async function countableNews (req, h) {
             reverseArticleList.push(articleList[i]);
         }
 
-        console.log(reverseArticleList);
-
     } catch (error) {
         console.error(error);
     }
@@ -105,6 +103,31 @@ async function countableNews (req, h) {
         return h.view('countable-news', {
             title: 'Noticias',
             reverseArticleList: reverseArticleList,
+        });
+    }
+}
+
+async function singleNew (req, h) {
+    let article;
+    let pos = req.params.id;
+    let id;
+
+    id = await articles.getIdWithPos (pos);
+
+    article = await articles.getOne (id);
+
+    if (req.state.user) {
+        return h.view('countable-new', {
+            user: req.state.user,
+            title: 'Noticia',
+            article: article,
+        });
+    }
+
+    else {
+        return h.view('countable-new', {
+            title: 'Noticias',
+            article: article,
         });
     }
 }
@@ -159,6 +182,12 @@ function insurance (req, h) {
     }
 }
 
+function capacitation (req, h) {
+    return h.view('capacitations', {
+        title: 'Capacitation',
+    });
+}
+
 async function viewUser (req, h) {
     let data;
     try {
@@ -210,5 +239,7 @@ module.exports = {
     clients,
     viewUser,
     countableNews,
-    insurance
+    singleNew,
+    insurance,
+    capacitation
 }

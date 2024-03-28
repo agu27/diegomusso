@@ -3,6 +3,8 @@
 const bcrypt = require('bcrypt');
 
 class Users {
+    
+
     constructor (db) {
         this.db = db
         this.ref = this.db.ref('/')
@@ -25,6 +27,7 @@ class Users {
     }
 
     async validateUser (data) {
+        console.log('hola2');
         const userQuery = await this.collection.orderByChild('email').equalTo(data.email).once('value');
         const userFound = userQuery.val();
         if (userFound) {

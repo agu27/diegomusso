@@ -117,6 +117,20 @@ nav {
     height: 375px;
 }
 
+.singleNew {
+    padding-left: 64px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.singleNew figure {
+    width: 50%;
+}
+
+.singleNew div p {
+    font-size: 3rem;
+}
+
 
 
 .contact {

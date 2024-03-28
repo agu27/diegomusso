@@ -36,6 +36,11 @@ module.exports =
 }),
 ({
     method: 'GET',
+    path: '/capacitations',
+    handler: site.capacitation
+}),
+({
+    method: 'GET',
     path: '/clients',
     handler: site.clients
 }),
@@ -65,6 +70,11 @@ module.exports =
     method: 'GET',
     path: '/countable/news',
     handler: site.countableNews
+}),
+({
+    method: 'GET',
+    path: '/countable/news/{id}',
+    handler: site.singleNew
 }),
 ({
     method: 'GET',

@@ -104,7 +104,7 @@
             </div>
         </div> --}}
 
-        {{#each reverseArticleList as |article|}}
+        {{!-- {{#each reverseArticleList as |article|}}
             {{#if article.display}}
                 <div class={{article.pos}} id={{article.pos}}>
                     <div class="wholeBody">
@@ -131,6 +131,38 @@
                         <img src={{article.path}} alt="">
                     </figure>
                 </div>
+            {{/if}}
+        {{/each}} --}}
+
+        {{#each reverseArticleList as |article|}}
+            {{#if article.display}}
+                <a href="/countable/news/{{article.pos}}" class="wholeNew">
+                    <div class={{article.pos}} id={{article.pos}}>
+                        <div class="wholeBody">
+                            <div class="body">
+                                <h2 class="newTitle">
+                                    {{article.title}}
+                                </h2>
+                                <p class="newBody" id="body{{article.pos}}">
+                                    {{article.body}}
+                                </p>
+                            </div>
+                            <div class="newDate">
+                                <p>
+                                    <span>{{article.date}}</span>
+                                </p>
+                                <a href="/news/delete/{{article.id}}">
+                                    <figure>
+                                        <img src="../assets/icons/bin.png" alt="">
+                                    </figure>
+                                </a>
+                            </div>
+                        </div>
+                        <figure class="newImage">
+                            <img src={{article.path}} alt="">
+                        </figure>
+                    </div>
+                </a>
             {{/if}}
         {{/each}}
 

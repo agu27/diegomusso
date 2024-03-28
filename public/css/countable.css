@@ -442,14 +442,22 @@ nav {
 
 .send-mail {
     width: 90vw;
-    height: 75vh;
+    height: 500px;
     background-color: rgb(210, 188, 175, 1);
     border: 1px solid black;
     border-radius: 16px;
     display: none;
     position: absolute;
-    top: 80%;
+    top: 95%;
     right: 5%;
+}
+
+.insurance-mail {
+    top: 160% !important;
+}
+
+.capacitations-mail {
+    top: 30% ;
 }
 
 .email-input {
@@ -460,6 +468,26 @@ nav {
     border: 1px solid black;
     padding: 8px 8px;
     text-align: justify;
+    resize: none;
+}
+
+.prox {
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.prox h1 {
+    color: white;
+    font-size: 3.5rem;
+}
+
+.prox p {
+    color: white;
+    font-size: 2.5rem;
 }
 
 

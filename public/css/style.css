@@ -239,12 +239,17 @@ nav {
 .team-description {
     height: auto;
     font-size: 1.5rem;
-    text-align: center;
+    text-align: justify;
     margin: 24px;
     padding: 16px ;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     border-radius: 32px;
+}
+
+.team-description p {
+    font-size: 1.5rem !important;
+    text-align: center;
 }
 
 .gallery {
@@ -259,19 +264,21 @@ nav {
     height: 100%;
 }
 
+.swiper-slide {
+    display: flex !important;
+    width: 100%;
+}
+
 .swiper-slide img {
-    max-height: 254px;
-    /* width: 100%; */
+    max-width: 50%;
+    /* object-fit: cover; */
+}
+
+.full-team {
+    max-width: 100% !important;
 }
 
 .swiper-slide div {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    opacity: 1;
-    z-index: 99;
-    width: 50%;
-    height: 100%;
     background-color: rgb(210, 188, 175, 0.3);
     padding-left: 20px;
     padding-right: 44px;

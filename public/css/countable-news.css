@@ -164,6 +164,13 @@ nav {
     border-top: 2px solid black;
 }
 
+.singleNew {
+    width: 100vw;
+    margin-top: 24px;
+    background-color: white;
+    padding: 24px;
+}
+
 .new2 div p, .new3 div p, .new4 div p, .new5 div p {
     max-height: 25px;
     overflow: hidden;
@@ -179,6 +186,11 @@ nav {
     height: 100%;
     font-size: 1.75rem;
     text-align: justify;
+}
+
+.wholeNew {
+    text-decoration: none;
+    color: black;
 }
 
 .contact {

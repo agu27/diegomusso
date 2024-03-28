@@ -155,9 +155,31 @@ nav {
     z-index: 999;
     width: 60vw;
     right: 20%;
-    top: 95%;
+    top: 120%;
+    height: 700px;
 }
 
 .email-input {
     height: 375px;
+}
+
+.capacitations-mail {
+    top: 10% !important;
+}
+
+/* .prox {
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} */
+
+.prox h1 {
+    font-size: 7.5rem;
+}
+
+.prox p {
+    font-size: 6.5rem;
 }
