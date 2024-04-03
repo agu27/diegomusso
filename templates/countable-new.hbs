@@ -59,6 +59,13 @@
                 <p>
                     <span>{{article.date}}</span>
                 </p>
+                {{#if user.admin}}
+                <a href="/news/delete/{{article.id}}">
+                    <figure>
+                        <img src="../../assets/icons/bin.png" alt="">
+                    </figure>
+                </a>
+                {{/if}}
             </div>
         </div>
         <figure class="newImage">

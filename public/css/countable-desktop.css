@@ -35,16 +35,24 @@ nav {
 }
 
 .gallery {
-    height: 800px;
+    height: 600px;
 }
 
 .swiper-slide div {
+    position: absolute;
+    top: 0;
+    left: 0;
     top: 0;
     left: 65%;
     z-index: 99;
     width: 35%;
     height: 100%;
     max-height: none;
+}
+
+.swiper-slide img {
+    width: 65%;
+    height: 100%;
 }
 
 .swiper-slide div p:nth-child(1){

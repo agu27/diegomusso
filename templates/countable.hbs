@@ -75,7 +75,6 @@
                 {{#each reverseArticleList as |article|}}
                     {{#if article.display}}
                         <div class="swiper-slide">
-                            <img src={{article.path}} alt="">
                             <div id={{article.pos}}>
                                 <p id="{{article.pos}}Title" class="newTitle">
                                     {{article.title}}
@@ -84,6 +83,7 @@
                                     {{article.body}}
                                 </p>
                             </div>
+                            <img src={{article.path}} alt="">
                         </div>
                     {{/if}}
                 {{/each}}
@@ -149,7 +149,7 @@
                 • Asesoramiento en materia societaria
             </span>
             <p id="taxation">
-                -Impositiva
+                -Impuestos
             </p>
             <span class="services-body" id="taxation-body">
                 • Liquidación de impuestos <br />
