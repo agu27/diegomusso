@@ -1,0 +1,44 @@
+
+.department-photo-1 {
+    top: 25% !important;
+    right: 40% !important;
+    width: 180px !important;
+}
+
+.department-photo-2,
+.department-photo-3 {
+    top: 30% !important;
+    width: 450px !important;
+}
+
+.department-photo-4,
+.department-photo-5 {
+    top: 25% !important;
+    right: 3% !important;
+    width: 180px !important;
+}
+
+
+.team {
+    flex-direction: row;
+}
+
+.our-team {
+    font-size: 3.5rem !important;
+}
+
+.team-description {
+    font-size: 1.5rem !important;
+}
+
+.gallery {
+    width: 70% !important;
+}
+
+.sustentable-text-title h1 {
+    font-size: 3rem !important;
+}
+
+.sustentable-text-body {
+    font-size: 2rem !important;
+}

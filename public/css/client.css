@@ -244,31 +244,37 @@ nav {
     background-color: white;
     margin: 8px;
     display: flex;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;
     color: black;
     text-decoration: none;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .data figure {
     margin: 8px 0 8px 0;
-    height: 40px;
+    height: 30px;
 }
 
 .data figure img {
     height: 100%;
 }
 
-.data div {
-    margin: 0 4px 4px 4px;
+.date {
+    margin: 4px;
 }
 
 .name {
+    width: 80px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
+    overflow-wrap: break-word;
 }
 
 @font-face {
