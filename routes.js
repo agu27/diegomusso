@@ -98,6 +98,8 @@ module.exports =
         payload: {
             parse: true,
             multipart: true,
+            maxBytes: 1000 * 1000 * 30,
+            allow: 'multipart/form-data',
         },
         validate: {
           payload: Joi.object({
@@ -116,6 +118,8 @@ module.exports =
         payload: {
             parse: true,
             multipart: true,
+            maxBytes: 1000 * 1000 * 30,
+            allow: 'multipart/form-data',
         },
         validate: {
           payload: Joi.object({

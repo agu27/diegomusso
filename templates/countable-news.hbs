@@ -66,15 +66,15 @@
             </div>
 
             <div class="grid">
-                    <div class="form-element">
-                        <input type="file" id="file-1" accept="image/png,image/jpg,image/jpeg" name="fileUpload"/>
-                        <label for="file-1" id="file-1-preview">
-                            <img src="" alt="">
-                            <div>
-                                <span>+</span>
-                            </div>
-                        </label>
-                    </div>
+                <div class="form-element">
+                    <input type="file" id="file-1" accept="image/png,image/jpg,image/jpeg" name="fileUpload"/>
+                    <label for="file-1" id="file-1-preview">
+                        <img src="" alt="">
+                        <div>
+                            <span>+</span>
+                        </div>
+                    </label>
+                </div>
             </div>
             
             <div class="data-submit">
@@ -143,7 +143,7 @@
                                 <h2 class="newTitle">
                                     {{article.title}}
                                 </h2>
-                                <p class="newBody" id="body{{article.pos}}">
+                                <p class="newBody" id="body{{article.pos}}" style="white-space: pre-line">
                                     {{article.body}}
                                 </p>
                             </div>

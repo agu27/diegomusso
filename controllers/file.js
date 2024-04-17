@@ -14,8 +14,6 @@ async function addFile (req, h) {
     if (!req.state.user) {
         return h.redirect('/login');
     }
-
-    console.log(req.payload);
     
     let result, filename, ext, userOwner, originalFileName
     
@@ -39,7 +37,6 @@ async function addFile (req, h) {
         }
         originalFileName = req.payload.fileName;
         userOwner = await users.getUserById(req.params.id);
-        console.log(userOwner);
         result = await file.create(req.payload, userOwner, ext, filename, originalFileName);
         req.log('info', `File uploaded with ID ${result}`);
     } catch (error) {

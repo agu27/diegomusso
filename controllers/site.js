@@ -40,8 +40,6 @@ async function countable (req, h) {
             reverseArticleList.push(articleList[i]);
         }
 
-        console.log(reverseArticleList);
-
     } catch (error) {
         console.error(error);
     }
@@ -121,6 +119,7 @@ async function singleNew (req, h) {
             user: req.state.user,
             title: 'Noticia',
             article: article,
+            id: id,
         });
     }
 
@@ -128,6 +127,7 @@ async function singleNew (req, h) {
         return h.view('countable-new', {
             title: 'Noticias',
             article: article,
+            id: id,
         });
     }
 }

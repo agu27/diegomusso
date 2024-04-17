@@ -7,7 +7,7 @@ class CountableNews {
         this.collection = this.ref.child('countableNews');
     }
 
-    async create (data, filename) {
+    async create (data, filename, body) {
         console.log(data);
 
         const {fileUpload,...article} = {

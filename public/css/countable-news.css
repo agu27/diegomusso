@@ -151,6 +151,7 @@ nav {
 }
 
 .newDate figure {
+    cursor: pointer;
     height: 24px;
 }
 
@@ -387,6 +388,47 @@ nav {
     border: 1px solid black;
     padding: 8px 8px;
     text-align: justify;
+}
+
+.removeAlert {
+    background-color: rgb(210, 188, 175, 1);
+    width: 250px;
+    height: 150px;
+    margin: auto;
+    position: absolute;
+    border-radius: 8px;
+    padding: 8px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+.removeAlert h1 {
+    text-align: center;
+    width: 100%;
+}
+
+.removeAlert div {
+    display: flex;
+    margin-top: 16px;
+}
+
+.removeAlert a {
+    text-align: center;
+    width: 60px;
+    background-color: white;
+    padding: 8px;
+    margin: 0 24px 0 24px;
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+    border-radius: 8px;
+    border: 1px solid black;
 }
 
 @font-face {

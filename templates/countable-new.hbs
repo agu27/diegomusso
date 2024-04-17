@@ -60,12 +60,19 @@
                     <span>{{article.date}}</span>
                 </p>
                 {{#if user.admin}}
-                <a href="/news/delete/{{article.id}}">
+                <a id="openAlert">
                     <figure>
                         <img src="../../assets/icons/bin.png" alt="">
                     </figure>
                 </a>
                 {{/if}}
+            </div>
+            <div class="removeAlert" id="deleteAlert">
+                <h1>¿Esta seguro que quiere eliminar esta noticia?</h1>
+                <div>
+                    <a href="/news/delete/{{id}}">Si</a>
+                    <a href="" id="closeAlert">No</a>
+                </div>
             </div>
         </div>
         <figure class="newImage">
@@ -276,6 +283,25 @@
         emailBttn.addEventListener('click', e => {
 
                 return sendEmail.style.display = 'flex'
+
+        });
+
+    </script>
+
+    <script>
+        let deleteAlert = document.getElementById('deleteAlert');
+        let closeAlert = document.getElementById('closeAlert');
+        let openAlert = document.getElementById('openAlert');
+
+        closeAlert.addEventListener('click', e => {
+
+                return deleteAlert.style.display = 'none'
+
+        });
+
+        openAlert.addEventListener('click', e => {
+
+                return deleteAlert.style.display = 'flex'
 
         });
 
