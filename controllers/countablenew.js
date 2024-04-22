@@ -175,7 +175,9 @@ async function addNew (req, h) {
 
         if (isBuffer(x)) {
 
-            ext = fileExt (req.payload.fileUpload);
+            ext = req.payload.fileName.split('.')[1];
+
+            // ext = fileExt (req.payload.fileUpload);
 
             filename = `new1.${ext}`;
 

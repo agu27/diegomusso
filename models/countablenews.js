@@ -8,7 +8,6 @@ class CountableNews {
     }
 
     async create (data, filename, body) {
-        console.log(data);
 
         const {fileUpload,...article} = {
             filename
