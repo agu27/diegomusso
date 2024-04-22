@@ -20,9 +20,13 @@ async function addFile (req, h) {
     try {
         const x = Buffer.from(req.payload.fileUpload);
 
+
+
         if (isBuffer(x)) {
 
-            ext = fileExt (req.payload.fileUpload);
+            ext = req.payload.fileName.split('.')[1];
+
+            // ext = fileExt (req.payload.fileUpload);
 
             filename = `${uuid()}.${ext}`;
 
@@ -47,7 +51,8 @@ async function addFile (req, h) {
         }).code(500).takeover();
     }
 
-
+    
+    console.log (ext);
     return h.redirect(`/client/${req.params.id}`);
 }
 
