@@ -16,9 +16,11 @@ const db = firebase.database();
 const Users = require('./users');
 const Files = require('./files');
 const CountableNews = require('./countablenews');
+const LastNew = require('./lastnew');
 
 module.exports = {
     users: new Users(db),
     files: new Files(db),
     articles: new CountableNews(db),
+    lastNew: new LastNew(db)
 }

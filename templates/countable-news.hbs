@@ -76,11 +76,16 @@
                     </label>
                 </div>
             </div>
+
+            <div class="data-submit filename">
+                <input type="hidden" name="fileName" id="fileName"/>
+            </div>
             
             <div class="data-submit">
                 <input type="hidden" name="crumb" value={{crumb}} />
                 <button type="submit" class="data-submit-button" style="font-family: inherit;">Crear</button>
             </div>
+
         </form>
     </div>
     <div class="news-list">
@@ -137,13 +142,13 @@
         {{#each reverseArticleList as |article|}}
             {{#if article.display}}
                 <a href="/countable/news/{{article.pos}}" class="wholeNew">
-                    <div class={{article.pos}} id={{article.pos}}>
+                    <div class="newAll" id="newAll">
                         <div class="wholeBody">
                             <div class="body">
                                 <h2 class="newTitle">
                                     {{article.title}}
                                 </h2>
-                                <p class="newBody" id="body{{article.pos}}" style="white-space: pre-line">
+                                <p class="newBody" id="bodyAll" style="white-space: pre-line">
                                     {{article.body}}
                                 </p>
                             </div>
@@ -256,85 +261,6 @@
         </form>
     </div>
 
-    <script>
-        let newTwo = document.getElementById('new2');
-        let bodyTwo = document.getElementById('bodynew2');
-        let newTwoSize = 0;
-        let newThree = document.getElementById('new3');
-        let bodyThree = document.getElementById('bodynew3');
-        let newThreeSize = 0;
-        let newFour = document.getElementById('new4');
-        let bodyFour = document.getElementById('bodynew4');
-        let newFourSize = 0;
-        let newFive = document.getElementById('new5');
-        let bodyFive = document.getElementById('bodynew5');
-        let newFiveSize = 0;
-
-        newTwo.addEventListener("click", (e) => {
-            console.log(e);
-
-            if(newTwoSize == 0) {
-                bodyTwo.style.maxHeight = '100%';
-                bodyTwo.style.whiteSpace = 'wrap'
-                newTwoSize = 1;
-            }
-
-            else {
-                bodyTwo.style.maxHeight = '40px';
-                bodyTwo.style.whiteSpace = 'nowrap'
-                newTwoSize = 0;
-            }
-        })
-
-        newThree.addEventListener("click", (e) => {
-            console.log(e);
-
-            if(newThreeSize == 0) {
-                bodyThree.style.maxHeight = '100%';
-                bodyThree.style.whiteSpace = 'wrap'
-                newThreeSize = 1;
-            }
-
-            else {
-                bodyThree.style.maxHeight = '40px';
-                bodyThree.style.whiteSpace = 'nowrap'
-                newThreeSize = 0;
-            }
-        })
-
-        newFour.addEventListener("click", (e) => {
-            console.log(e);
-
-            if(newThreeSize == 0) {
-                bodyFour.style.maxHeight = '100%';
-                bodyFour.style.whiteSpace = 'wrap'
-                newFourSize = 1;
-            }
-
-            else {
-                bodyFour.style.maxHeight = '40px';
-                bodyFour.style.whiteSpace = 'nowrap'
-                newFourSize = 0;
-            }
-        })
-
-        newFive.addEventListener("click", (e) => {
-            console.log(e);
-
-            if(newFiveSize == 0) {
-                bodyFive.style.maxHeight = '100%';
-                bodyFive.style.whiteSpace = 'wrap'
-                newFiveSize = 1;
-            }
-
-            else {
-                bodyFive.style.maxHeight = '40px';
-                bodyFive.style.whiteSpace = 'nowrap'
-                newFiveSize = 0;
-            }
-        })
-    </script>
-
     <script type="text/javascript">
         let fileInput = document.getElementById('fileUpload');
         let fileNameInput = document.getElementById('fileName');
@@ -361,15 +287,16 @@
     <script>
         function previewBeforeUpload (id) {
 
-            let fileOne = document.getElementById(id)
+            let fileOne = document.getElementById(id);
+            let fileNameInput = document.getElementById('fileName');
 
             fileOne.addEventListener('change', e => {
                 console.log(e)
                 if  (e.target.files.length == 0) {
                     return;
                 }
-
                 let file = e.target.files[0];
+                fileNameInput.value = file.name;
                 let url = URL.createObjectURL(file);
                 document.querySelector("#"+id+"-preview div").innerText = file.name;
                 document.querySelector("#"+id+"-preview img").src = url
@@ -415,8 +342,6 @@
                 return sendEmail.style.display = 'flex'
 
         });
-
-    </script>
 
 </body>
 </html>

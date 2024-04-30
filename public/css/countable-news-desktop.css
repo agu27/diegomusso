@@ -34,13 +34,17 @@ nav {
     border-radius: 20px;
 }
 
-.new1, .new2, .new3, .new4, .new5 {
+.newAll {
     padding-left: 64px;
     display: flex;
     flex-wrap: wrap;
 }
 
-.new1 figure, .new2 figure, .new3 figure, .new4 figure, .new5 figure {
+.newAll div p {
+    max-height: 400px;
+}
+
+.newAll figure{
     width: 50%;
 }
 
@@ -84,7 +88,7 @@ nav {
 }
 
 .add-new {
-    height: 765px;
+    height: 800px;
     width: 50vw;
 }
 
@@ -117,6 +121,10 @@ nav {
     height: 375px;
 }
 
+.newBody {
+    font-size: 2.5rem;
+}
+
 .singleNew {
     padding-left: 64px;
     display: flex;
@@ -130,8 +138,6 @@ nav {
 .singleNew div p {
     font-size: 3rem;
 }
-
-
 
 .contact {
     width: 100%;

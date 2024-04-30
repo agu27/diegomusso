@@ -124,7 +124,7 @@ nav {
     margin-top: 16px;
 }
 
-.new1 {
+.newAll {
     padding: 24px;
 }
 
@@ -160,7 +160,7 @@ nav {
     object-fit: contain;
 }
 
-.new2, .new3, .new4, .new5 {
+.newAll {
     padding: 24px;
     border-top: 2px solid black;
 }
@@ -172,11 +172,12 @@ nav {
     padding: 24px;
 }
 
-.new2 div p, .new3 div p, .new4 div p, .new5 div p {
-    max-height: 25px;
+.newAll div p {
+    max-height: 110px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    word-wrap: break-word;
 }
 
 .newTitle {
@@ -187,11 +188,17 @@ nav {
     height: 100%;
     font-size: 1.75rem;
     text-align: justify;
+    color: black;
+    word-wrap: break-word;
 }
 
 .wholeNew {
     text-decoration: none;
     color: black;
+}
+
+.wholeBody {
+    height: 100%;
 }
 
 .contact {
@@ -239,7 +246,7 @@ nav {
 
 .add-new {
     width: 90vw;
-    height: 75vh;
+    height: 520px;
     background-color: rgb(210, 188, 175, 1);
     border: 1px solid black;
     border-radius: 16px;
@@ -259,6 +266,10 @@ nav {
 .data-upload {
     width: 90%;
     margin: 0 auto;
+}
+
+.filename {
+    display: none;
 }
 
 .box {
@@ -404,8 +415,9 @@ nav {
     align-items: center;
     margin-left: auto;
     margin-right: auto;
-    left: 0;
-    right: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .removeAlert h1 {

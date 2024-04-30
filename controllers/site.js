@@ -6,6 +6,8 @@ const articles = require('../models/index').articles;
 
 const users = require ('../models/index').users;
 
+const lastNew = require ('../models/index').lastNew;
+
 
 async function home (req, h) {
     return h.view('index', {

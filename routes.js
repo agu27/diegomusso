@@ -126,6 +126,7 @@ module.exports =
             title: Joi.any().required(),
             newBody: Joi.any().required(),
             fileUpload: Joi.any().required(),
+            fileName: Joi.any(),
           }), 
           failAction: user.failValidation
         }

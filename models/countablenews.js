@@ -7,7 +7,7 @@ class CountableNews {
         this.collection = this.ref.child('countableNews');
     }
 
-    async create (data, filename, body) {
+    async create (data, filename, pos) {
 
         const {fileUpload,...article} = {
             filename
@@ -21,7 +21,7 @@ class CountableNews {
         
         article.path = `../assets/uploads/${filename}`;
         article.display = true;
-        article.pos = 'new1';
+        article.pos = pos;
         article.title = data.title;
         article.body = data.newBody;
         article.date = `${date}/${month}/${year}`;
@@ -61,6 +61,15 @@ class CountableNews {
         const data = Object.keys(query.val())[0];
 
         return data;
+    }
+
+    async getFilenameWithPos (pos) {
+        let idPath = await this.getIdWithPos(pos);
+        const pathDel = await this.getOne(idPath);
+        const arr = Object.values(pathDel);
+        const newPathDel = arr[3];
+
+        return newPathDel;
     }
 
     async getFiles () {
